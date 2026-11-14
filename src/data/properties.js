@@ -1,0 +1,1340 @@
+// EstateEase Comprehensive Property Dataset (Converted to Indian Rupees - ₹)
+
+export const CATEGORIES = [
+  {
+    id: 'apartments',
+    name: 'Apartments',
+    slug: 'Apartment',
+    count: 6,
+    description: 'Chic urban apartments & luxury penthouses with panoramic city views',
+    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',
+    icon: 'Building2'
+  },
+  {
+    id: 'villas',
+    name: 'Villas',
+    slug: 'Villa',
+    count: 5,
+    description: 'Exquisite private estates with private pools, lush gardens & gated privacy',
+    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80',
+    icon: 'Palmtree'
+  },
+  {
+    id: 'independent-houses',
+    name: 'Independent Houses',
+    slug: 'Independent House',
+    count: 5,
+    description: 'Spacious family homes with private yards in premier neighborhoods',
+    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
+    icon: 'Home'
+  },
+  {
+    id: 'luxury-homes',
+    name: 'Luxury Homes',
+    slug: 'Luxury Home',
+    count: 4,
+    description: 'Architectural masterpieces crafted with state-of-the-art finishes',
+    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
+    icon: 'Sparkles'
+  },
+  {
+    id: 'commercial',
+    name: 'Commercial Properties',
+    slug: 'Commercial',
+    count: 2,
+    description: 'Prime executive suites, modern creative spaces & retail hubs',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
+    icon: 'Briefcase'
+  }
+];
+
+export const POPULAR_LOCATIONS = [
+  {
+    id: 'new-york',
+    name: 'New York, NY',
+    shortName: 'New York',
+    propertyCount: '142 Properties',
+    startingPrice: '₹65 Lakh',
+    image: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=800&q=80',
+    avgPrice: '₹1.4 Cr'
+  },
+  {
+    id: 'los-angeles',
+    name: 'Los Angeles, CA',
+    shortName: 'Los Angeles',
+    propertyCount: '118 Properties',
+    startingPrice: '₹89 Lakh',
+    image: 'https://images.unsplash.com/photo-1580655653885-65763b2597d0?auto=format&fit=crop&w=800&q=80',
+    avgPrice: '₹1.8 Cr'
+  },
+  {
+    id: 'miami',
+    name: 'Miami, FL',
+    shortName: 'Miami',
+    propertyCount: '95 Properties',
+    startingPrice: '₹52 Lakh',
+    image: 'https://images.unsplash.com/photo-1533106497176-45ae19e68ba8?auto=format&fit=crop&w=800&q=80',
+    avgPrice: '₹1.1 Cr'
+  },
+  {
+    id: 'austin',
+    name: 'Austin, TX',
+    shortName: 'Austin',
+    propertyCount: '74 Properties',
+    startingPrice: '₹43 Lakh',
+    image: 'https://images.unsplash.com/photo-1531218150217-54595bc2b934?auto=format&fit=crop&w=800&q=80',
+    avgPrice: '₹68 Lakh'
+  },
+  {
+    id: 'seattle',
+    name: 'Seattle, WA',
+    shortName: 'Seattle',
+    propertyCount: '86 Properties',
+    startingPrice: '₹59 Lakh',
+    image: 'https://images.unsplash.com/photo-1502175353174-a7a70e73b362?auto=format&fit=crop&w=800&q=80',
+    avgPrice: '₹92 Lakh'
+  },
+  {
+    id: 'chicago',
+    name: 'Chicago, IL',
+    shortName: 'Chicago',
+    propertyCount: '63 Properties',
+    startingPrice: '₹38 Lakh',
+    image: 'https://images.unsplash.com/photo-1494522855154-9297ac14b55f?auto=format&fit=crop&w=800&q=80',
+    avgPrice: '₹54 Lakh'
+  }
+];
+
+export const TESTIMONIALS = [
+  {
+    id: 1,
+    name: 'Eleanor Vance',
+    role: 'Homebuyer in Beverly Hills',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
+    rating: 5,
+    date: '2 weeks ago',
+    comment: 'EstateEase made our property acquisition seamless. The high-resolution image galleries and interactive neighborhood map gave us absolute confidence before our visit. We closed on our dream villa in under 3 weeks!'
+  },
+  {
+    id: 2,
+    name: 'Marcus Sterling',
+    role: 'Real Estate Investor',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+    rating: 5,
+    date: '1 month ago',
+    comment: 'The level of detail, transparent Rupee pricing breakdown, and filter precision on EstateEase outclasses every other portal I have used. The agent connection was instantaneous and professional.'
+  },
+  {
+    id: 3,
+    name: 'Sophia Chen-Reynolds',
+    role: 'Architect & Tenant in Manhattan',
+    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80',
+    rating: 5,
+    date: '3 weeks ago',
+    comment: 'As an architect, I am very picky about spatial layouts and lighting. EstateEase showcased floor plans, sun orientation, and verified specs accurately. I secured an incredible Tribeca loft that felt like home immediately.'
+  }
+];
+
+export const PROPERTIES = [
+  {
+    id: 'prop-1',
+    title: 'The Skyview Horizon Penthouse',
+    slug: 'skyview-horizon-penthouse',
+    type: 'Apartment',
+    status: 'for-sale',
+    price: 38500000,
+    priceFormatted: '₹3.85 Cr',
+    address: '432 Park Avenue, Penthouse 58B',
+    city: 'New York',
+    state: 'NY',
+    zipCode: '10022',
+    coordinates: { lat: 40.7618, lng: -73.9712 },
+    bedrooms: 4,
+    bathrooms: 4.5,
+    sqft: 4200,
+    yearBuilt: 2021,
+    parkingSpaces: 2,
+    hoa: '₹22,000/mo',
+    featured: true,
+    verified: true,
+    rating: 4.9,
+    images: [
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Rising gracefully above Midtown Manhattan, this custom-designed 4,200 sq.ft. corner penthouse offers sweeping 360-degree vistas of Central Park and the skyline. Featuring 12-foot ceilings, solid white-oak herringbone flooring, and floor-to-ceiling acoustic triple-glazed windows. The chef-grade kitchen boasts custom Italian walnut cabinetry, Calacatta marble slab islands, and dual Gaggenau appliances. The primary wing includes an expansive walk-in boutique closet, dual spa bathrooms with heated floors, and a freestanding soaking tub.',
+    amenities: [
+      'Panoramic Central Park View',
+      'Private Elevator Foyer',
+      '24/7 White-Glove Concierge',
+      'Heated Saltwater Lap Pool',
+      'Resident Fitness & Yoga Studio',
+      'Automated Climate & Shades',
+      'Sommelier Wine Cellar',
+      'Valet Parking'
+    ],
+    nearbyFacilities: [
+      { name: 'Central Park South', type: 'Park', distance: '0.2 miles' },
+      { name: 'Bergdorf Goodman & 5th Ave', type: 'Shopping', distance: '0.3 miles' },
+      { name: '59th St - Lexington Ave Subway', type: 'Transit', distance: '0.1 miles' },
+      { name: 'The Spence School', type: 'School', distance: '0.9 miles' },
+      { name: 'Mount Sinai Medical Center', type: 'Hospital', distance: '1.4 miles' }
+    ],
+    agent: {
+      name: 'Victoria Hawthorne',
+      title: 'Principal Luxury Advisor',
+      phone: '+1 (212) 555-0198',
+      email: 'victoria@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80',
+      rating: 4.95,
+      reviewCount: 48,
+      experience: '14 Years'
+    }
+  },
+  {
+    id: 'prop-2',
+    title: 'The Bel-Air Olive Grove Estate',
+    slug: 'bel-air-olive-grove-estate',
+    type: 'Villa',
+    status: 'for-sale',
+    price: 89500000,
+    priceFormatted: '₹8.95 Cr',
+    address: '10848 Bellagio Road',
+    city: 'Los Angeles',
+    state: 'CA',
+    zipCode: '90077',
+    coordinates: { lat: 34.0837, lng: -118.4485 },
+    bedrooms: 6,
+    bathrooms: 8,
+    sqft: 8500,
+    yearBuilt: 2022,
+    parkingSpaces: 4,
+    hoa: 'None',
+    featured: true,
+    verified: true,
+    rating: 5.0,
+    images: [
+      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Nestled behind private security gates on one of Bel-Air’s most coveted lanes, this modern Mediterranean sanctuary sits on over an acre of mature olive trees and landscaped gardens. Natural light cascades through Fleetwood disappearing pocket glass doors, blurring indoor and outdoor luxury living. Highlights include a zero-edge infinity pool overlooking canyon views, outdoor kitchen with pizza oven, screening theatre room, temperature-controlled 1,000-bottle wine gallery, and a standalone guest casita.',
+    amenities: [
+      'Infinity Edge Swimming Pool',
+      'Private Tennis / Pickleball Court',
+      'State-of-the-Art Screening Room',
+      'Outdoor Kitchen & Fire Pit',
+      'Guest Casita / Studio',
+      'Gated Motor Court (8 cars)',
+      'Solar Panel Array & Tesla Powerwalls',
+      'Spa, Sauna & Cold Plunge'
+    ],
+    nearbyFacilities: [
+      { name: 'Bel-Air Country Club', type: 'Golf & Leisure', distance: '0.6 miles' },
+      { name: 'Rodeo Drive, Beverly Hills', type: 'Shopping', distance: '2.5 miles' },
+      { name: 'UCLA Medical Center', type: 'Hospital', distance: '1.8 miles' },
+      { name: 'The Harvard-Westlake School', type: 'School', distance: '3.1 miles' }
+    ],
+    agent: {
+      name: 'Julian Montgomery',
+      title: 'Managing Partner - West Coast',
+      phone: '+1 (310) 555-0842',
+      email: 'julian@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80',
+      rating: 4.98,
+      reviewCount: 62,
+      experience: '18 Years'
+    }
+  },
+  {
+    id: 'prop-3',
+    title: 'Biscayne Bayfront Modern Villa',
+    slug: 'biscayne-bayfront-modern-villa',
+    type: 'Villa',
+    status: 'for-sale',
+    price: 64500000,
+    priceFormatted: '₹6.45 Cr',
+    address: '4720 North Bay Road',
+    city: 'Miami',
+    state: 'FL',
+    zipCode: '33140',
+    coordinates: { lat: 25.8235, lng: -80.1384 },
+    bedrooms: 5,
+    bathrooms: 6,
+    sqft: 6100,
+    yearBuilt: 2023,
+    parkingSpaces: 3,
+    hoa: 'None',
+    featured: true,
+    verified: true,
+    rating: 4.88,
+    images: [
+      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Experience waterfront tropical modernism at its finest on prestigious North Bay Road. Boasting 100 feet of prime deep-water frontage equipped with a private yacht dock and direct ocean access. Designed by renowned architects, the estate features clean lines, warm organic woods, and floor-to-ceiling glass that captures endless sunsets across Biscayne Bay. Complete with a rooftop terrace, summer kitchen, lap pool, and an elevator.',
+    amenities: [
+      'Private Yacht Dock (Up to 80ft)',
+      'Direct Biscayne Bay Water Access',
+      'Rooftop Sunset Lounge',
+      'Outdoor Summer Kitchen',
+      'Heated Lap Pool & Spa',
+      'Private Elevator',
+      'Smart Lutron Lighting System'
+    ],
+    nearbyFacilities: [
+      { name: 'Miami Beach Golf Club', type: 'Golf', distance: '1.2 miles' },
+      { name: 'Lincoln Road Mall', type: 'Shopping', distance: '2.0 miles' },
+      { name: 'Mount Sinai Medical Center Miami', type: 'Hospital', distance: '0.8 miles' },
+      { name: 'Miami International Airport', type: 'Airport', distance: '11.0 miles' }
+    ],
+    agent: {
+      name: 'Camila Rodriguez',
+      title: 'Waterfront Specialist',
+      phone: '+1 (305) 555-0371',
+      email: 'camila@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80',
+      rating: 4.92,
+      reviewCount: 39,
+      experience: '11 Years'
+    }
+  },
+  {
+    id: 'prop-4',
+    title: 'The SoHo Iron & Light Loft',
+    slug: 'soho-iron-light-loft',
+    type: 'Apartment',
+    status: 'for-rent',
+    price: 95000,
+    priceFormatted: '₹95,000/mo',
+    pricePeriod: '/mo',
+    address: '94 Mercer Street, Apt 3A',
+    city: 'New York',
+    state: 'NY',
+    zipCode: '10012',
+    coordinates: { lat: 40.7231, lng: -73.9984 },
+    bedrooms: 2,
+    bathrooms: 2,
+    sqft: 2150,
+    yearBuilt: 1910,
+    parkingSpaces: 0,
+    hoa: 'Included in rent',
+    featured: true,
+    verified: true,
+    rating: 4.91,
+    images: [
+      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'An authentic cast-iron architectural loft located on cobblestoned Mercer Street. Featuring original Corinthian cast-iron columns, exposed brick walls, and soaring 13-foot timber beamed ceilings. Oversized double-hung windows flood the expansive living and dining salon with abundant natural morning light. Upgraded with an open chef’s kitchen, Miele appliances, in-unit washer/dryer, and a primary suite with custom walnut walk-in closets.',
+    amenities: [
+      'Keyed Elevator Access',
+      'Exposed Brick & Iron Columns',
+      'Sub-Zero & Miele Kitchen',
+      'In-Unit Washer & Dryer',
+      'Central AC with Nest Controls',
+      'Pet Friendly',
+      'Video Intercom Security'
+    ],
+    nearbyFacilities: [
+      { name: 'Prince St Broadway Subway', type: 'Transit', distance: '0.1 miles' },
+      { name: 'Washington Square Park', type: 'Park', distance: '0.4 miles' },
+      { name: 'Dean & DeLuca Gourmet Area', type: 'Dining', distance: '0.2 miles' },
+      { name: 'NYU Campus', type: 'University', distance: '0.5 miles' }
+    ],
+    agent: {
+      name: 'Victoria Hawthorne',
+      title: 'Principal Luxury Advisor',
+      phone: '+1 (212) 555-0198',
+      email: 'victoria@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80',
+      rating: 4.95,
+      reviewCount: 48,
+      experience: '14 Years'
+    }
+  },
+  {
+    id: 'prop-5',
+    title: 'Lake Austin Contemporary Hillside',
+    slug: 'lake-austin-contemporary-hillside',
+    type: 'Luxury Home',
+    status: 'for-sale',
+    price: 42500000,
+    priceFormatted: '₹4.25 Cr',
+    address: '3204 Westlake Terrace',
+    city: 'Austin',
+    state: 'TX',
+    zipCode: '78746',
+    coordinates: { lat: 30.2974, lng: -97.7942 },
+    bedrooms: 5,
+    bathrooms: 5.5,
+    sqft: 5400,
+    yearBuilt: 2022,
+    parkingSpaces: 3,
+    hoa: '₹8,500/mo',
+    featured: true,
+    verified: true,
+    rating: 4.94,
+    images: [
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Positioned high above Lake Austin in the top-ranked Eanes school district, this warm contemporary residence captures serene water and hill country panoramas. Designed with native Texas limestone, warm cedar accents, and commercial glass curtains. The multi-level negative edge pool cascades toward the lake basin, accompanied by a covered outdoor living room with fireplace and summer kitchen.',
+    amenities: [
+      'Lake Austin Views',
+      'Negative Edge Pool & Spa',
+      'Covered Outdoor Pavilion with BBQ',
+      'Top-Ranked Eanes ISD Schools',
+      'Private Media Room',
+      'Home Gym with Steam Shower',
+      'Solar Integration'
+    ],
+    nearbyFacilities: [
+      { name: 'Westlake High School', type: 'School', distance: '1.1 miles' },
+      { name: 'Lake Austin Marina', type: 'Waterfront', distance: '0.8 miles' },
+      { name: 'Downtown Austin', type: 'City Center', distance: '6.5 miles' },
+      { name: 'Barton Creek Greenbelt', type: 'Recreation', distance: '2.4 miles' }
+    ],
+    agent: {
+      name: 'Travis Sterling',
+      title: 'Texas Luxury Director',
+      phone: '+1 (512) 555-0678',
+      email: 'travis@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=300&q=80',
+      rating: 4.96,
+      reviewCount: 41,
+      experience: '13 Years'
+    }
+  },
+  {
+    id: 'prop-6',
+    title: 'Emerald Bay Craftsman Sanctuary',
+    slug: 'emerald-bay-craftsman-sanctuary',
+    type: 'Independent House',
+    status: 'for-sale',
+    price: 18500000,
+    priceFormatted: '₹1.85 Cr',
+    address: '2418 Magnolia Boulevard W',
+    city: 'Seattle',
+    state: 'WA',
+    zipCode: '98199',
+    coordinates: { lat: 47.6412, lng: -122.3992 },
+    bedrooms: 4,
+    bathrooms: 3.5,
+    sqft: 3450,
+    yearBuilt: 2019,
+    parkingSpaces: 2,
+    hoa: 'None',
+    featured: false,
+    verified: true,
+    rating: 4.87,
+    images: [
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Impeccable Pacific Northwest Craftsman boasting breathtaking views of Puget Sound and the Olympic Mountains. Thoughtfully rebuilt from the ground up with custom milled fir trim, a gas river-rock fireplace, and broad covered cedar front and back porches. The backyard is an urban oasis with mature fruit trees, Japanese maples, and a designer cedar sauna.',
+    amenities: [
+      'Puget Sound & Mountain Views',
+      'Outdoor Cedar Barrel Sauna',
+      'River-Rock Double Fireplace',
+      'Private Landscaped Backyard',
+      'Radiant Heated Bathroom Floors',
+      'EV Charger Equipped Garage',
+      'Chefs Gas Range & Butler Pantry'
+    ],
+    nearbyFacilities: [
+      { name: 'Discovery Park', type: 'Park', distance: '0.4 miles' },
+      { name: 'Magnolia Village Center', type: 'Shopping & Dining', distance: '0.7 miles' },
+      { name: 'Blaine Elementary School', type: 'School', distance: '0.5 miles' },
+      { name: 'Downtown Seattle', type: 'Center', distance: '4.8 miles' }
+    ],
+    agent: {
+      name: 'Hanna Lindqvist',
+      title: 'Senior Residential Consultant',
+      phone: '+1 (206) 555-0419',
+      email: 'hanna@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80',
+      rating: 4.91,
+      reviewCount: 35,
+      experience: '9 Years'
+    }
+  },
+  {
+    id: 'prop-7',
+    title: 'Lincoln Park Historic Brownstone',
+    slug: 'lincoln-park-historic-brownstone',
+    type: 'Independent House',
+    status: 'for-sale',
+    price: 21900000,
+    priceFormatted: '₹2.19 Cr',
+    address: '1842 N Cleveland Avenue',
+    city: 'Chicago',
+    state: 'IL',
+    zipCode: '60614',
+    coordinates: { lat: 41.9157, lng: -87.6418 },
+    bedrooms: 5,
+    bathrooms: 4.5,
+    sqft: 4300,
+    yearBuilt: 2018,
+    parkingSpaces: 2,
+    hoa: 'None',
+    featured: false,
+    verified: true,
+    rating: 4.89,
+    images: [
+      'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'An architectural marvel in the heart of historic Lincoln Park. This limestone and brick single-family home seamlessly unites classical facade grandeur with sleek Scandinavian interior aesthetics. A dramatic 4-story custom floating staircase, heated 2-car garage with landscaped rooftop deck, and custom Poliform kitchen cabinetry. Steps from Oz Park and the Lincoln Park Zoo.',
+    amenities: [
+      'Private Rooftop Garden Terrace',
+      'Heated 2-Car Garage',
+      'Poliform Custom Kitchen',
+      'Sub-Zero & Wolf Wine Tower',
+      'Full Finished Lower Level Rec Room',
+      'Smart Intercom & Security'
+    ],
+    nearbyFacilities: [
+      { name: 'Oz Park', type: 'Park', distance: '0.2 miles' },
+      { name: 'Lincoln Park High School', type: 'School', distance: '0.4 miles' },
+      { name: 'Armitage Brown Line CTA', type: 'Transit', distance: '0.3 miles' },
+      { name: 'Lake Michigan Shoreline', type: 'Beach', distance: '1.1 miles' }
+    ],
+    agent: {
+      name: 'Julian Montgomery',
+      title: 'Managing Partner',
+      phone: '+1 (312) 555-0811',
+      email: 'julian@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80',
+      rating: 4.98,
+      reviewCount: 62,
+      experience: '18 Years'
+    }
+  },
+  {
+    id: 'prop-8',
+    title: 'The Glass Pavilion at Russian Hill',
+    slug: 'glass-pavilion-russian-hill',
+    type: 'Apartment',
+    status: 'for-rent',
+    price: 72000,
+    priceFormatted: '₹72,000/mo',
+    pricePeriod: '/mo',
+    address: '1070 Green Street, Apt 7B',
+    city: 'San Francisco',
+    state: 'CA',
+    zipCode: '94133',
+    coordinates: { lat: 37.7989, lng: -122.4172 },
+    bedrooms: 2,
+    bathrooms: 2,
+    sqft: 1850,
+    yearBuilt: 2020,
+    parkingSpaces: 1,
+    hoa: 'Included in rent',
+    featured: false,
+    verified: true,
+    rating: 4.92,
+    images: [
+      'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Dramatic full-floor residence overlooking Alcatraz, the Golden Gate Bridge, and Coit Tower. Wall-to-wall glass sliders open to a deep sheltered wind-screened balcony. Interior boasts wide-plank French oak floors, automated solar shading, Ann Sacks tiles, and a temperature-controlled wine storage room. Garage parking with Tesla wall charger included.',
+    amenities: [
+      'Golden Gate & Bay Views',
+      'Sheltered Outdoor Balcony',
+      'Dedicated Tesla EV Parking',
+      'Doorman & Package Concierge',
+      'Radiant Heated Floors',
+      'In-Unit Laundry Room'
+    ],
+    nearbyFacilities: [
+      { name: 'Hyde Street Cable Car', type: 'Transit', distance: '0.1 miles' },
+      { name: 'Ina Coolbrith Park', type: 'Park', distance: '0.3 miles' },
+      { name: 'North Beach Dining Quarter', type: 'Dining', distance: '0.4 miles' },
+      { name: 'Sutter Health CPMC', type: 'Hospital', distance: '1.2 miles' }
+    ],
+    agent: {
+      name: 'Victoria Hawthorne',
+      title: 'Principal Luxury Advisor',
+      phone: '+1 (415) 555-0923',
+      email: 'victoria@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80',
+      rating: 4.95,
+      reviewCount: 48,
+      experience: '14 Years'
+    }
+  },
+  {
+    id: 'prop-9',
+    title: 'Aspen Mountain Timber Chalet',
+    slug: 'aspen-mountain-timber-chalet',
+    type: 'Luxury Home',
+    status: 'for-sale',
+    price: 115000000,
+    priceFormatted: '₹11.5 Cr',
+    address: '710 Red Mountain Road',
+    city: 'Aspen',
+    state: 'CO',
+    zipCode: '81611',
+    coordinates: { lat: 39.2012, lng: -106.8245 },
+    bedrooms: 6,
+    bathrooms: 7,
+    sqft: 7200,
+    yearBuilt: 2021,
+    parkingSpaces: 3,
+    hoa: 'None',
+    featured: true,
+    verified: true,
+    rating: 4.99,
+    images: [
+      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Perched on legendary Red Mountain, known as "Billionaire Mountain," this ski-in estate delivers world-class views across Aspen Mountain and the Roaring Fork Valley. Featuring hand-hewn Douglas fir beams, Colorado moss-rock hearths, and soaring 24-foot ceilings. Amenities include a heated driveway, ski prep locker room with boot warmers, heated outdoor stone spa, and indoor sauna.',
+    amenities: [
+      'Ski-In / Ski-Out Access',
+      'Panoramic Mountain Views',
+      'Heated Outdoor Stone Spa',
+      'Custom Ski Locker & Boot Warmers',
+      'Full Heated Driveway & Walkways',
+      'Caterer Kitchen & Wine Vault',
+      'Indoor Sauna & Steam Room'
+    ],
+    nearbyFacilities: [
+      { name: 'Aspen Mountain Silver Queen Gondola', type: 'Ski Resort', distance: '1.5 miles' },
+      { name: 'Downtown Aspen Dining', type: 'Fine Dining', distance: '1.2 miles' },
+      { name: 'Aspen Valley Hospital', type: 'Hospital', distance: '2.8 miles' },
+      { name: 'Aspen/Pitkin County Airport', type: 'Airport', distance: '4.5 miles' }
+    ],
+    agent: {
+      name: 'Julian Montgomery',
+      title: 'Managing Partner',
+      phone: '+1 (970) 555-0312',
+      email: 'julian@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80',
+      rating: 4.98,
+      reviewCount: 62,
+      experience: '18 Years'
+    }
+  },
+  {
+    id: 'prop-10',
+    title: 'The Silo Modern Loft in RiNo',
+    slug: 'silo-modern-loft-rino',
+    type: 'Apartment',
+    status: 'for-rent',
+    price: 34000,
+    priceFormatted: '₹34,000/mo',
+    pricePeriod: '/mo',
+    address: '2901 Blake Street, Unit 404',
+    city: 'Denver',
+    state: 'CO',
+    zipCode: '80205',
+    coordinates: { lat: 39.7613, lng: -104.9822 },
+    bedrooms: 2,
+    bathrooms: 2,
+    sqft: 1450,
+    yearBuilt: 2020,
+    parkingSpaces: 1,
+    hoa: 'Included in rent',
+    featured: false,
+    verified: true,
+    rating: 4.86,
+    images: [
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Located in Denver’s River North Art District (RiNo), this industrial chic corner loft blends polished concrete flooring, 11-foot exposed steel ceilings, and oversized factory windows with downtown Denver skyline views. Steps from local craft breweries, art galleries, and commuter rail station.',
+    amenities: [
+      'Polished Concrete Floors',
+      'Denver Skyline Views',
+      'Covered Garage Parking Spot',
+      'Building Dog Wash & Bike Workshop',
+      'Community Rooftop BBQ Patio',
+      'High-Speed Fiber Ready'
+    ],
+    nearbyFacilities: [
+      { name: '38th & Blake Light Rail Station', type: 'Transit', distance: '0.3 miles' },
+      { name: 'Denver Central Market', type: 'Food Hall', distance: '0.4 miles' },
+      { name: 'Coors Field', type: 'Sports Arena', distance: '0.9 miles' },
+      { name: 'Denver Health Center', type: 'Hospital', distance: '2.5 miles' }
+    ],
+    agent: {
+      name: 'Travis Sterling',
+      title: 'Regional Luxury Director',
+      phone: '+1 (303) 555-0722',
+      email: 'travis@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=300&q=80',
+      rating: 4.96,
+      reviewCount: 41,
+      experience: '13 Years'
+    }
+  },
+  {
+    id: 'prop-11',
+    title: 'Sonoran Desert Modern Villa',
+    slug: 'sonoran-desert-modern-villa',
+    type: 'Villa',
+    status: 'for-sale',
+    price: 36000000,
+    priceFormatted: '₹3.60 Cr',
+    address: '10425 E Troon Mountain Drive',
+    city: 'Scottsdale',
+    state: 'AZ',
+    zipCode: '85255',
+    coordinates: { lat: 33.6811, lng: -111.8542 },
+    bedrooms: 4,
+    bathrooms: 5,
+    sqft: 5200,
+    yearBuilt: 2022,
+    parkingSpaces: 3,
+    hoa: '₹12,000/mo',
+    featured: false,
+    verified: true,
+    rating: 4.93,
+    images: [
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'An architectural tribute to Frank Lloyd Wright situated at the base of Troon Mountain. Rammed earth construction, cantilevered shade canopies, and extensive pocket glass walls that open onto an expansive travertine patio with a desert lap pool, bubbling spa, and putting green. Revel in golden hour sunsets and sparkling Pinnacle Peak views.',
+    amenities: [
+      'Pinnacle Peak Mountain Views',
+      'Desert Lap Pool & Sunken Spa',
+      'Private Putting Green',
+      'Indoor & Outdoor Fireplaces',
+      'Solar Powered Net-Zero Design',
+      'Temperature Regulated Wine Storage',
+      '3-Car Air-Conditioned Garage'
+    ],
+    nearbyFacilities: [
+      { name: 'Troon North Golf Club', type: 'Golf Course', distance: '0.9 miles' },
+      { name: 'Pinnacle Peak Park Trailhead', type: 'Hiking', distance: '1.4 miles' },
+      { name: 'HonorHealth Scottsdale Hospital', type: 'Hospital', distance: '4.8 miles' },
+      { name: 'Scottsdale Quarter', type: 'Shopping', distance: '8.2 miles' }
+    ],
+    agent: {
+      name: 'Camila Rodriguez',
+      title: 'Waterfront & Desert Specialist',
+      phone: '+1 (480) 555-0145',
+      email: 'camila@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80',
+      rating: 4.92,
+      reviewCount: 39,
+      experience: '11 Years'
+    }
+  },
+  {
+    id: 'prop-12',
+    title: 'Beacon Hill Classic Townhouse',
+    slug: 'beacon-hill-classic-townhouse',
+    type: 'Independent House',
+    status: 'for-sale',
+    price: 32000000,
+    priceFormatted: '₹3.20 Cr',
+    address: '68 Chestnut Street',
+    city: 'Boston',
+    state: 'MA',
+    zipCode: '02108',
+    coordinates: { lat: 42.3571, lng: -71.0694 },
+    bedrooms: 4,
+    bathrooms: 4,
+    sqft: 3800,
+    yearBuilt: 2017,
+    parkingSpaces: 1,
+    hoa: 'None',
+    featured: false,
+    verified: true,
+    rating: 4.9,
+    images: [
+      'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Set along historic gas-lit Chestnut Street, this five-story Federal townhouse has been meticulously restored and reinforced with steel framing, an elevator serving all floors, and a private landscaped brick garden courtyard. Finished with antique wide pine floors, six functioning marble fireplaces, and a roof deck gazing over Charles River Basin.',
+    amenities: [
+      'Private 5-Stop Elevator',
+      'Charles River Rooftop Deck',
+      'Private Walled Brick Garden',
+      '6 Marble Fireplaces',
+      'Heated Deeded Parking Space',
+      'Wine Cellar & Wet Bar'
+    ],
+    nearbyFacilities: [
+      { name: 'Boston Public Garden', type: 'Park', distance: '0.2 miles' },
+      { name: 'Charles/MGH Red Line Station', type: 'Transit', distance: '0.3 miles' },
+      { name: 'Massachusetts General Hospital', type: 'Hospital', distance: '0.4 miles' },
+      { name: 'Charles River Esplanade', type: 'Recreation', distance: '0.3 miles' }
+    ],
+    agent: {
+      name: 'Victoria Hawthorne',
+      title: 'Principal Luxury Advisor',
+      phone: '+1 (617) 555-0899',
+      email: 'victoria@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80',
+      rating: 4.95,
+      reviewCount: 48,
+      experience: '14 Years'
+    }
+  },
+  {
+    id: 'prop-13',
+    title: 'The Hudson Modern Creative Campus',
+    slug: 'hudson-modern-creative-campus',
+    type: 'Commercial',
+    status: 'for-rent',
+    price: 185000,
+    priceFormatted: '₹1,85,000/mo',
+    pricePeriod: '/mo',
+    address: '520 West 28th Street, 4th Floor',
+    city: 'New York',
+    state: 'NY',
+    zipCode: '10001',
+    coordinates: { lat: 40.7516, lng: -74.0041 },
+    bedrooms: 0,
+    bathrooms: 4,
+    sqft: 6800,
+    yearBuilt: 2022,
+    parkingSpaces: 4,
+    hoa: 'Included in lease',
+    featured: false,
+    verified: true,
+    rating: 4.88,
+    images: [
+      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Trophy creative commercial office floor directly adjacent to the High Line in Chelsea. Featuring 14-foot slab-to-slab glass curtains, polished terrazzo reception, dedicated acoustic podcasting/conference suites, dual private restrooms with showers, and a commercial-grade kitchen cafe. Ready for tech headquarters, venture funds, or creative design studios.',
+    amenities: [
+      'High Line Park Frontage',
+      'Direct Freight & Passenger Elevators',
+      'Dual 10Gbps Redundant Fiber',
+      'Soundproof Conference Suites',
+      'Private Showers & Bike Storage',
+      '24/7 Security & Keycard Access'
+    ],
+    nearbyFacilities: [
+      { name: 'Hudson Yards Subway Station', type: 'Transit', distance: '0.4 miles' },
+      { name: 'High Line Park Entrance', type: 'Park', distance: '0.1 miles' },
+      { name: 'Equinox Hotel & Fitness', type: 'Fitness', distance: '0.3 miles' },
+      { name: 'Chelsea Market', type: 'Dining', distance: '0.7 miles' }
+    ],
+    agent: {
+      name: 'Julian Montgomery',
+      title: 'Managing Partner',
+      phone: '+1 (212) 555-0811',
+      email: 'julian@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80',
+      rating: 4.98,
+      reviewCount: 62,
+      experience: '18 Years'
+    }
+  },
+  {
+    id: 'prop-14',
+    title: 'Silicon Beach Tech Executive Studio',
+    slug: 'silicon-beach-tech-executive-studio',
+    type: 'Commercial',
+    status: 'for-sale',
+    price: 49500000,
+    priceFormatted: '₹4.95 Cr',
+    address: '13020 Pacific Promenade',
+    city: 'Los Angeles',
+    state: 'CA',
+    zipCode: '90094',
+    coordinates: { lat: 33.9712, lng: -118.4231 },
+    bedrooms: 0,
+    bathrooms: 3,
+    sqft: 4500,
+    yearBuilt: 2021,
+    parkingSpaces: 10,
+    hoa: '₹15,000/mo',
+    featured: false,
+    verified: true,
+    rating: 4.85,
+    images: [
+      'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Premier freestanding Silicon Beach commercial office studio in Playa Vista. Surrounded by YouTube, Google, and Meta hubs. Features soaring open-concept timber trusses, outdoor patio deck for team meetings, polished aggregate flooring, and 10 secured subterranean parking spots.',
+    amenities: [
+      '10 Subterranean Parking Spaces',
+      'Private Outdoor Meeting Patio',
+      'Commercial Solar Rooftop',
+      'Commercial Grade HVAC with HEPA',
+      'Turnkey Smart Conference Tech'
+    ],
+    nearbyFacilities: [
+      { name: 'Playa Vista Central Park', type: 'Park', distance: '0.2 miles' },
+      { name: 'Runway at Playa Vista (Whole Foods)', type: 'Retail', distance: '0.3 miles' },
+      { name: 'LAX International Airport', type: 'Airport', distance: '3.5 miles' }
+    ],
+    agent: {
+      name: 'Julian Montgomery',
+      title: 'Managing Partner - West Coast',
+      phone: '+1 (310) 555-0842',
+      email: 'julian@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80',
+      rating: 4.98,
+      reviewCount: 62,
+      experience: '18 Years'
+    }
+  },
+  {
+    id: 'prop-15',
+    title: 'Coconut Grove Tropical Haven',
+    slug: 'coconut-grove-tropical-haven',
+    type: 'Independent House',
+    status: 'for-rent',
+    price: 68000,
+    priceFormatted: '₹68,000/mo',
+    pricePeriod: '/mo',
+    address: '3580 Main Highway',
+    city: 'Miami',
+    state: 'FL',
+    zipCode: '33133',
+    coordinates: { lat: 25.7145, lng: -80.2418 },
+    bedrooms: 3,
+    bathrooms: 3,
+    sqft: 2800,
+    yearBuilt: 2020,
+    parkingSpaces: 2,
+    hoa: 'Included in rent',
+    featured: false,
+    verified: true,
+    rating: 4.89,
+    images: [
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Immerse yourself in lush botanical surroundings in vibrant Coconut Grove. This two-story home features open-concept living with Indonesian teak ceilings, custom porcelain tile floors, and motorized sliding glass screens leading to a salt-water dipping pool and outdoor shower.',
+    amenities: [
+      'Heated Saltwater Dipping Pool',
+      'Outdoor Tropical Rain Shower',
+      'Impact Hurricane Glass Throughout',
+      'Gated Driveway with 2 Covered Carports',
+      'Walk to Coconut Grove Village Cafes'
+    ],
+    nearbyFacilities: [
+      { name: 'Peacock Park & Bayfront Marina', type: 'Waterfront', distance: '0.4 miles' },
+      { name: 'Coconut Grove Organic Farmers Market', type: 'Market', distance: '0.3 miles' },
+      { name: 'Ransom Everglades School', type: 'School', distance: '0.8 miles' },
+      { name: 'University of Miami', type: 'University', distance: '3.2 miles' }
+    ],
+    agent: {
+      name: 'Camila Rodriguez',
+      title: 'Waterfront Specialist',
+      phone: '+1 (305) 555-0371',
+      email: 'camila@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80',
+      rating: 4.92,
+      reviewCount: 39,
+      experience: '11 Years'
+    }
+  },
+  {
+    id: 'prop-16',
+    title: 'The Palisades Oceancrest Villa',
+    slug: 'palisades-oceancrest-villa',
+    type: 'Luxury Home',
+    status: 'for-sale',
+    price: 98000000,
+    priceFormatted: '₹9.80 Cr',
+    address: '15400 Corona Del Mar',
+    city: 'Los Angeles',
+    state: 'CA',
+    zipCode: '90272',
+    coordinates: { lat: 34.0381, lng: -118.5273 },
+    bedrooms: 6,
+    bathrooms: 7,
+    sqft: 7900,
+    yearBuilt: 2023,
+    parkingSpaces: 4,
+    hoa: 'None',
+    featured: true,
+    verified: true,
+    rating: 4.97,
+    images: [
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Commanding uninterrupted Pacific Ocean panoramas stretching from Santa Monica pier to Point Dume. Designed by master architect Paul McClean, this organic modern masterpiece features water elements around the entrance, cantilevered cedar overhangs, an 80-foot infinity swimming pool that appears to spill directly into the ocean, and a Dolby Atmos subterranean cinema.',
+    amenities: [
+      'Unobstructed Whitewater Ocean Views',
+      '80-Foot Zero-Edge Infinity Pool',
+      'Dolby Atmos Private 12-Seat Cinema',
+      'Commercial Glass Elevator',
+      'Temperature Controlled 800-Bottle Cellar',
+      'Zen Garden with Water Feature'
+    ],
+    nearbyFacilities: [
+      { name: 'Will Rogers State Beach', type: 'Beach', distance: '0.5 miles' },
+      { name: 'Palisades Village by Caruso', type: 'Shopping', distance: '1.2 miles' },
+      { name: 'Santa Monica Canyon', type: 'Dining', distance: '1.8 miles' },
+      { name: 'Saint Johns Health Center', type: 'Hospital', distance: '3.6 miles' }
+    ],
+    agent: {
+      name: 'Julian Montgomery',
+      title: 'Managing Partner - West Coast',
+      phone: '+1 (310) 555-0842',
+      email: 'julian@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80',
+      rating: 4.98,
+      reviewCount: 62,
+      experience: '18 Years'
+    }
+  },
+  {
+    id: 'prop-17',
+    title: 'Rainier Vista Modern Farmhouse',
+    slug: 'rainier-vista-modern-farmhouse',
+    type: 'Independent House',
+    status: 'for-sale',
+    price: 16500000,
+    priceFormatted: '₹1.65 Cr',
+    address: '4512 51st Avenue S',
+    city: 'Seattle',
+    state: 'WA',
+    zipCode: '98118',
+    coordinates: { lat: 47.5592, lng: -122.2718 },
+    bedrooms: 4,
+    bathrooms: 3,
+    sqft: 3100,
+    yearBuilt: 2021,
+    parkingSpaces: 2,
+    hoa: 'None',
+    featured: false,
+    verified: true,
+    rating: 4.88,
+    images: [
+      'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Charming blend of modern Scandinavian simplicity and American farmhouse warmth. Vaulted shiplap ceilings, wide-plank white oak flooring, black metal sash windows framing Mount Rainier on clear days, and an expansive chef kitchen with quartz waterfall countertops and induction cooking.',
+    amenities: [
+      'Mount Rainier Views',
+      'Quartz Waterfall Kitchen Island',
+      'Level Fenced Yard with Firepit',
+      'Detached Home Office Pod',
+      'Tesla Wall Connector',
+      'Heat Pump High-Efficiency Heating & AC'
+    ],
+    nearbyFacilities: [
+      { name: 'Columbia City Light Rail', type: 'Transit', distance: '0.6 miles' },
+      { name: 'Seward Park on Lake Washington', type: 'Park', distance: '1.0 miles' },
+      { name: 'Columbia City Farmers Market', type: 'Market', distance: '0.8 miles' }
+    ],
+    agent: {
+      name: 'Hanna Lindqvist',
+      title: 'Senior Residential Consultant',
+      phone: '+1 (206) 555-0419',
+      email: 'hanna@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80',
+      rating: 4.91,
+      reviewCount: 35,
+      experience: '9 Years'
+    }
+  },
+  {
+    id: 'prop-18',
+    title: 'South Congress Urban Garden Townhome',
+    slug: 'south-congress-urban-garden-townhome',
+    type: 'Apartment',
+    status: 'for-rent',
+    price: 39500,
+    priceFormatted: '₹39,500/mo',
+    pricePeriod: '/mo',
+    address: '1604 S Congress Ave',
+    city: 'Austin',
+    state: 'TX',
+    zipCode: '78704',
+    coordinates: { lat: 30.2482, lng: -97.7497 },
+    bedrooms: 2,
+    bathrooms: 2.5,
+    sqft: 1720,
+    yearBuilt: 2022,
+    parkingSpaces: 1,
+    hoa: 'Included in rent',
+    featured: false,
+    verified: true,
+    rating: 4.9,
+    images: [
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Steps from renowned South Congress Avenue dining, coffee shops, and live music venues. This tri-level designer townhome features a private xeriscaped patio garden, polished concrete first floor, engineered oak upper floors, and a rooftop sky lounge with views of the Texas Capitol building.',
+    amenities: [
+      'Private Xeriscaped Garden Patio',
+      'Rooftop Sky Lounge',
+      'Walk to South Congress Cafes',
+      'Dedicated Gated Parking',
+      'Smart Lock & Ring Video System',
+      'High-Efficiency Spray Foam Insulation'
+    ],
+    nearbyFacilities: [
+      { name: 'Hotel San Jose & Jo’s Coffee', type: 'Cafe & Leisure', distance: '0.2 miles' },
+      { name: 'Lady Bird Lake Hike & Bike Trail', type: 'Recreation', distance: '0.9 miles' },
+      { name: 'Downtown Austin', type: 'City Center', distance: '1.4 miles' },
+      { name: 'St. David’s South Austin Hospital', type: 'Hospital', distance: '2.1 miles' }
+    ],
+    agent: {
+      name: 'Travis Sterling',
+      title: 'Texas Luxury Director',
+      phone: '+1 (512) 555-0678',
+      email: 'travis@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=300&q=80',
+      rating: 4.96,
+      reviewCount: 41,
+      experience: '13 Years'
+    }
+  },
+  {
+    id: 'prop-19',
+    title: 'The Streeterville Lakefront High-Rise',
+    slug: 'streeterville-lakefront-high-rise',
+    type: 'Apartment',
+    status: 'for-rent',
+    price: 46000,
+    priceFormatted: '₹46,000/mo',
+    pricePeriod: '/mo',
+    address: '401 E Ontario Street, Unit 38D',
+    city: 'Chicago',
+    state: 'IL',
+    zipCode: '60611',
+    coordinates: { lat: 41.8933, lng: -87.6174 },
+    bedrooms: 3,
+    bathrooms: 2.5,
+    sqft: 2100,
+    yearBuilt: 2019,
+    parkingSpaces: 1,
+    hoa: 'Included in rent',
+    featured: false,
+    verified: true,
+    rating: 4.87,
+    images: [
+      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Bask in endless blue horizons over Lake Michigan and Navy Pier. This high-floor corner residence features 10-foot ceilings, floor-to-ceiling soundproof windows, automated blinds, and a wrap-around private terrace. Building amenities include a 50th-floor sky lounge, indoor heated pool, state-of-the-art fitness club, and 24-hour doorman.',
+    amenities: [
+      'Unobstructed Lake Michigan Views',
+      'Wrap-Around Private Terrace',
+      '24/7 Concierge & Door Staff',
+      'Indoor Heated Pool & Hot Tub',
+      'Sky Lounge with Catering Kitchen',
+      'Dry Cleaning & Package Valet'
+    ],
+    nearbyFacilities: [
+      { name: 'Ohio Street Beach', type: 'Beach', distance: '0.3 miles' },
+      { name: 'Northwestern Memorial Hospital', type: 'Hospital', distance: '0.2 miles' },
+      { name: 'Magnificent Mile Shopping', type: 'Shopping', distance: '0.4 miles' },
+      { name: 'Navy Pier', type: 'Entertainment', distance: '0.5 miles' }
+    ],
+    agent: {
+      name: 'Julian Montgomery',
+      title: 'Managing Partner',
+      phone: '+1 (312) 555-0811',
+      email: 'julian@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80',
+      rating: 4.98,
+      reviewCount: 62,
+      experience: '18 Years'
+    }
+  },
+  {
+    id: 'prop-20',
+    title: 'Venice Beach Architectural Canal Villa',
+    slug: 'venice-beach-architectural-canal-villa',
+    type: 'Villa',
+    status: 'for-sale',
+    price: 49500000,
+    priceFormatted: '₹4.95 Cr',
+    address: '228 Carroll Canal',
+    city: 'Los Angeles',
+    state: 'CA',
+    zipCode: '90291',
+    coordinates: { lat: 33.9850, lng: -118.4678 },
+    bedrooms: 4,
+    bathrooms: 4.5,
+    sqft: 3950,
+    yearBuilt: 2022,
+    parkingSpaces: 2,
+    hoa: 'None',
+    featured: true,
+    verified: true,
+    rating: 4.95,
+    images: [
+      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Rare opportunity on the historic Venice Canals. Walk out to your private waterfront wooden deck and private paddleboard launch. Inside, three levels of sun-drenched architectural mastery include board-formed concrete walls, polished terrazzo, custom rift-sawn oak cabinetry, and an expansive rooftop viewing deck with ocean breezes and 360-degree views.',
+    amenities: [
+      'Direct Canal Frontage & Boat Dock',
+      'Rooftop Deck with Fire Pit & Wet Bar',
+      'Board-Formed Architectural Concrete',
+      'Custom Miele Kitchen',
+      '2-Car Direct Entry Garage',
+      'Walk to Abbot Kinney Boulevard'
+    ],
+    nearbyFacilities: [
+      { name: 'Abbot Kinney Boulevard', type: 'Dining & Boutiques', distance: '0.3 miles' },
+      { name: 'Venice Beach Boardwalk', type: 'Beach', distance: '0.4 miles' },
+      { name: 'Santa Monica Pier', type: 'Landmark', distance: '2.1 miles' }
+    ],
+    agent: {
+      name: 'Julian Montgomery',
+      title: 'Managing Partner - West Coast',
+      phone: '+1 (310) 555-0842',
+      email: 'julian@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80',
+      rating: 4.98,
+      reviewCount: 62,
+      experience: '18 Years'
+    }
+  },
+  {
+    id: 'prop-21',
+    title: 'Cherry Creek Modern Luxury Residence',
+    slug: 'cherry-creek-modern-luxury-residence',
+    type: 'Luxury Home',
+    status: 'for-sale',
+    price: 31000000,
+    priceFormatted: '₹3.10 Cr',
+    address: '420 Saint Paul Street',
+    city: 'Denver',
+    state: 'CO',
+    zipCode: '80206',
+    coordinates: { lat: 39.7228, lng: -104.9514 },
+    bedrooms: 5,
+    bathrooms: 5.5,
+    sqft: 4900,
+    yearBuilt: 2022,
+    parkingSpaces: 3,
+    hoa: 'None',
+    featured: false,
+    verified: true,
+    rating: 4.91,
+    images: [
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Situated in Denver’s most upscale walking neighborhood of Cherry Creek North. Unrivaled craftsmanship featuring limestone cladding, structural glass railings, a chef kitchen with waterfall quartz island, elevator servicing all levels, and an all-season rooftop terrace with mountain views and an outdoor fireplace.',
+    amenities: [
+      'Residential Elevator to All 3 Levels',
+      'Rooftop Terrace with Mountain Views',
+      'Finished Basement with Home Theater',
+      'Wine Display Room with Custom Glass',
+      'Attached Heated 3-Car Garage',
+      'Stroll to Cherry Creek North Boutiques'
+    ],
+    nearbyFacilities: [
+      { name: 'Cherry Creek Shopping Center', type: 'Shopping', distance: '0.3 miles' },
+      { name: 'Cherry Creek Trail', type: 'Bike & Run Trail', distance: '0.4 miles' },
+      { name: 'Denver Botanic Gardens', type: 'Gardens', distance: '1.1 miles' },
+      { name: 'National Jewish Health', type: 'Hospital', distance: '1.5 miles' }
+    ],
+    agent: {
+      name: 'Travis Sterling',
+      title: 'Regional Luxury Director',
+      phone: '+1 (303) 555-0722',
+      email: 'travis@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=300&q=80',
+      rating: 4.96,
+      reviewCount: 41,
+      experience: '13 Years'
+    }
+  },
+  {
+    id: 'prop-22',
+    title: 'Midtown Skyline Studio Suite',
+    slug: 'midtown-skyline-studio-suite',
+    type: 'Apartment',
+    status: 'for-rent',
+    price: 28500,
+    priceFormatted: '₹28,500/mo',
+    pricePeriod: '/mo',
+    address: '300 E 54th Street, Apt 18C',
+    city: 'New York',
+    state: 'NY',
+    zipCode: '10022',
+    coordinates: { lat: 40.7571, lng: -73.9664 },
+    bedrooms: 1,
+    bathrooms: 1,
+    sqft: 750,
+    yearBuilt: 2020,
+    parkingSpaces: 0,
+    hoa: 'Included in rent',
+    featured: false,
+    verified: true,
+    rating: 4.82,
+    images: [
+      'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80'
+    ],
+    description: 'Efficient, sunlit luxury living in Sutton Place / Midtown East. Features oversized soundproof windows with open Eastern views, brand-new kitchen with Caesarstone countertops and integrated appliances, custom built-in closets, and an elegant marble bathroom with deep soaking tub.',
+    amenities: [
+      '24-Hour Doorman & Staff',
+      'Rooftop Sun Deck',
+      'Resident Fitness Center',
+      'Laundry Facilities on Every Floor',
+      'Pet Friendly'
+    ],
+    nearbyFacilities: [
+      { name: 'Lexington Ave/53rd St Subway (E, M, 6)', type: 'Transit', distance: '0.2 miles' },
+      { name: 'Whole Foods Market', type: 'Supermarket', distance: '0.3 miles' },
+      { name: 'East River Promenade', type: 'Park', distance: '0.4 miles' }
+    ],
+    agent: {
+      name: 'Victoria Hawthorne',
+      title: 'Principal Luxury Advisor',
+      phone: '+1 (212) 555-0198',
+      email: 'victoria@estateease.com',
+      avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80',
+      rating: 4.95,
+      reviewCount: 48,
+      experience: '14 Years'
+    }
+  }
+];
+
+export const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80';
